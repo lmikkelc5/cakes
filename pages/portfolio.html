@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Sweet Vows</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf7;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fcefe9;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #d88c9a;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #fff5f0;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d88c9a;
+      font-weight: bold;
+    }
+
+    .portfolio {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      color: #d88c9a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sweet Vows Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+
+  <section class="portfolio">
+    <h2>Our Cake Creations</h2>
+    <div class="grid">
+      <img src="cake1.jpg" alt="Elegant white wedding cake">
+      <img src="cake2.jpg" alt="Three-tier rose wedding cake">
+      <img src="cake3.jpg" alt="Rustic-themed cake with flowers">
+      <img src="cake4.jpg" alt="Minimalist modern wedding cake">
+    </div>
+  </section>
+</body>
+</html>
