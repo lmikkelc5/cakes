@@ -62,6 +62,31 @@
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -72,17 +97,32 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
+    <a href="../portfolio.html">Portfolio</a>
   </nav>
 
   <section class="portfolio">
     <h2>Our Cake Creations</h2>
     <div class="grid">
-      <img src="cake1.jpg" alt="Elegant white wedding cake">
-      <img src="cake2.jpg" alt="Three-tier rose wedding cake">
-      <img src="cake3.jpg" alt="Rustic-themed cake with flowers">
-      <img src="cake4.jpg" alt="Minimalist modern wedding cake">
+      <img src="../images/fake.jpg" alt="fake weddingcake picture for testing" onclick="openLightbox(this.src)">
+      <img src="cake2.jpg" alt="Three-tier rose wedding cake" onclick="openLightbox(this.src)">
+      <img src="cake3.jpg" alt="Rustic-themed cake with flowers" onclick="openLightbox(this.src)">
+      <img src="cake4.jpg" alt="Minimalist modern wedding cake" onclick="openLightbox(this.src)">
     </div>
   </section>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Cake preview">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
